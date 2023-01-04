@@ -682,12 +682,14 @@ header {
   background-position: 50% 40px;
   background-size: 1793px;
   height: 996px;
+  
+  
 }
 
 .banner{
   
   padding: 0 25px;
-  width: 1300px;
+  width: 90%;
   height:169px;
   
 }
@@ -715,19 +717,29 @@ header {
   justify-content:center;
   align-items:center;
 }
-.banner-list{
+.banner-list-wrapper{
+  margin: 0 auto ;
+  width: 90%;
+  display: flex;
+  align-items: center;
   margin-top: 40px;
+}
+.banner-list{
+  
   display: flex;
   justify-content: space-between;
   height: 100px;
   border-bottom: 0.1px solid #ddd;
   align-items: center;
+  width: 100%;
+  
 }
 .banner-item{
   font-size: 20px;
   color: white;
   min-height: 50px;
   padding-left: 60px;
+  width: 33.3%;
 }
 .banner-item span{
   font-weight: bold;
@@ -743,4 +755,64 @@ header {
 .uptime.banner-item{
   background: url(../img/uptime-white.svg) no-repeat center left;
   background-size: 45px 45px;
+}
+.footer-content{
+  margin: 0 auto;
+  width: 90%;
+  margin-top: 30px;
+  display: flex;
+  position: relative;
+  
+  flex-wrap: wrap;
+}
+.footer-column{
+  width: 20%;
+  color: white;
+  font-size: 15px;
+  
+}
+.column-list{
+  list-style-type: none;
+}
+.column-header{
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.column-item{
+  margin-top: 20px;
+  height: 20px;
+}
+.column-item a{
+  text-decoration: none;
+  color: white;
+}
+.column-item a:hover{
+  border-bottom: 0.5px solid white;
+}
+.footer-content .footer-btn{
+  position: absolute;
+  bottom: 0;
+  right: 114px;
+}
+.footer-content .btn-wrapper{
+  width: 150px;
+  margin-top: 20px;
+  height: 50px;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.btn-wrapper img{
+  width: 100%;
+}
+.btn-wrapper:hover{
+  transform: translateY(-10px);
+}
+.footer-end{
+
+  display: flex;
+  justify-content:space-around;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 40px;
+  border-top: 0.5px solid #ddd;
 }
