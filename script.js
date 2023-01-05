@@ -29,17 +29,42 @@ function openTab(evt, contentClass, sectionName) {
   document.getElementById(sectionName).style.display = "flex";
   evt.currentTarget.className += " active";
 }
-const navitem = document.querySelectorAll(".list__nav-item");
-console.log(navitem);
-const arraynav = [...navitem];
-arraynav[0].addEventListener("mouseover", onmouseover);
-const navheader = document.querySelector(".nav-header");
-function onmouseover() {
-  navheader.style = "height: 86.2vh;";
+// const navitem = document.querySelectorAll(".list__nav-item");
+// console.log(navitem);
+// const arraynav = [...navitem];
+// arraynav[0].addEventListener("mouseover", onmouseover);
+// const navheader = document.querySelector(".nav-header");
+// function onmouseover() {
+//   navheader.style = "height: 86.2vh;";
+// }
+// arraynav[0].addEventListener("mouseout", onBlurwindow);
+// console.log(arraynav[0]);
+// function onBlurwindow() {
+//   console.log(1);
+//   navheader.style = "height: 0;";
+// }
+function showSlides(evt, n) {
+  console.log(evt.currentTarget);
+  let slides = document.getElementsByClassName("slider");
+
+  const buttons = document.querySelectorAll('.slider-btn');
+  console.log(buttons);
+  for (let i = 0; i < buttons.length; i++) {
+
+    buttons[i].classList.toggle('inactive')
+
+  }
+
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  // for (i = 0; i < buttons.length; i++) {
+  //   buttons[i].className = dots[i].className.replace(" active", "");
+  // }
+  slides[n].style.display = "block";
+
+  // dots[slideIndex - 1].className += " active";
 }
-arraynav[0].addEventListener("mouseout", onBlurwindow);
-console.log(arraynav[0]);
-function onBlurwindow() {
-  console.log(1);
-  navheader.style = "height: 0;";
-}
+
+

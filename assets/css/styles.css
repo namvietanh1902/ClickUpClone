@@ -13,14 +13,14 @@
     justify-content: space-between;
     align-items: center;
     padding: 28px  120px;
-    width: 100%;
+    width: 85%;
     transition: all .5s;
   }
   .sticky{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     position: fixed;
     top: 0;
-    width: 1300px;
+    width: 85%;
     z-index:1000;
     background-color: white;
     
@@ -162,7 +162,7 @@
   .intro-right{
     padding-top:45px;
     padding-bottom: 30px;
-    width:670px;
+    width:66.6%;
   
   }
   .video-wrapper video{
@@ -173,6 +173,7 @@
   .video-wrapper{
     border-radius: 20px;
     overflow: hidden;
+    
     margin-left:32px ;
   
   }
@@ -620,9 +621,78 @@
     justify-content:center;
     align-items:center;
   }
+  .slider{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+  .review-section{
+    max-width: 80%;
+    margin-left: auto;
+    display: flex;
+    min-height: 420px;
+    border-radius: 60px;
+    background-color: #fef7fa;
+  }
+  .review-img{
+    min-width: 420px;
+    margin-left: -256px;
+    position: relative;
+   
+  }
+  .review-img img{
+    width: 100%;
+    position: absolute;
+  }
+  .review-img::after{
+    width: 75px;
+    position: absolute;
+    height: 75px;
+    background: url(../img/play.svg) no-repeat,rgba(255,255,255,.6);
+    background-position: center;
+    background-size: 70px;
+    padding: 9px;
+    box-shadow: 0 24.9063px 32.2317px rgb(0 0 0 / 13%);
+    content: ' ';
+    backdrop-filter: blur(2.93016px);
+    right: -4px;
+    top: 50%;
+    transform: translate(0,-50%);
+    border-radius: 50%;
+  }
+  .review-content{
+    text-align: left;
+    width: 640px;
+    font-size: 22px;
+    line-height:1.4;
+    
+    margin-left: 40px;
+  }
+  .review-text{
+    margin: 40px 0px;
+    font-weight: 400;
+  }
+  .reviewer{
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  .review-logo{
+    display: flex;
+    justify-content: space-between;
+  }
+  .slider-btn-wrapper .slider-btn{
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .slider-btn.inactive{
+    opacity:0.2;
+    cursor: pointer;
+  }
   .support-section {
     padding: 60px 80px;
-    width:1230px;
+    width:80%;
     min-height: 480px;
     
     margin: 0 auto;
