@@ -491,28 +491,8 @@
 }
 
 /* phone */
-@media screen and (max-width: 649px) {
-  .header {
-    padding: 12px;
-  }
+@media screen and (max-width: 768px) {
 
-  .tomobile {
-    display: block;
-  }
-
-  .header-right h2 {
-    display: none;
-  }
-  .header-list__nav {
-    display: none;
-  }
-
-  .ct-mb {
-    left: 0;
-  }
-  .login,.sign-up{
-    display: none;
-  }
 }
 
 
@@ -661,6 +641,24 @@
   .pink-section{
     background-color: #fff8fb;
   }
+  .tablinks_mb{
+    max-width: 80%;
+    margin: 20px auto;
+    overflow: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    display: none;
+  }
+  .tablinks_mb .tab{
+    text-decoration: none;
+    color:black;
+    margin-right: 20px;
+    animation: none;
+  }
+  .tablinks_mb .tab:hover{
+    animation: none;
+    border-bottom: 3px solid;
+  }
   .tablinks{
     display: flex;
     justify-content:space-between;
@@ -737,7 +735,7 @@
   .tab:hover{
    animation: UnderlinedFocus .3s ease-in-out ; 
   }
-  .pink-section .tab:hover {
+  .pink.tab:hover {
     border-bottom: 3px solid #eb3dae;
     
   }
@@ -754,7 +752,7 @@
       border-width: 3px;
     }
   }
-  .pink-section .tab.active {
+  .pink.tab.active {
     border-bottom: 3px solid #eb3dae;
   }
   .features-section{
@@ -793,10 +791,10 @@
   .features-section .content-video{
     margin: 0 170px;
   }
-  .features-section .tab.active{
+  .features.tab.active{
     border-bottom: 3px solid #7b68ee;
   }
-  .features-section .tab:hover{
+  .features.tab:hover{
     border-bottom: 3px solid #7b68ee;
   }
   .ending-btn-section{
@@ -901,7 +899,7 @@
     font-size: 7px;
   
   }
-  .platform-section .tab.active::after {
+  .platform-section .tablinks .tab.active::after {
     content: " ";
     position: absolute;
     width: 44px;
@@ -919,6 +917,9 @@
   }
   .platform-section .tab:hover{
     color: rgba(0, 0, 0, 1);
+  }
+   .tablinks_mb .platform.tab:hover,.tablinks_mb .platform.tab.active{
+    border-bottom:3px solid #00b884;
   }
   .platform.ending-btn-section{
     background-color: #e5f8f2;
@@ -952,10 +953,10 @@
   .department-section .tab{
     margin :0 20px;
   }
-  .department-section .tab.active{
+  .department.tab.active{
     border-bottom: 3px solid #49ccf9;
   }
-  .department-section .tab:hover{
+  .department.tab:hover{
     border-bottom: 3px solid #49ccf9;
     
   }
@@ -1309,6 +1310,27 @@
   
 
 @media screen and (max-width:768px) {
+  .header {
+    padding: 12px;
+  }
+
+  .tomobile {
+    display: block;
+  }
+
+  .header-right h2 {
+    display: none;
+  }
+  .header-list__nav {
+    display: none;
+  }
+
+  .ct-mb {
+    left: 0;
+  }
+  .login,.sign-up{
+    display: none;
+  }
   .footer-column{
     width: 50%;
     margin-top: 10px;
@@ -1319,6 +1341,12 @@
   }
   .footer-wrapper{
     width: 95%;
+  }
+  .tablinks,.features-section .tablinks,.department-section .tablinks,.platform-section .tablinks{
+    display: none;
+  }
+  .tablinks_mb{
+    display:flex;
   }
   
 }
