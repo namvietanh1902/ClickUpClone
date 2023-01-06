@@ -66,5 +66,69 @@ function showSlides(evt, n) {
 
   // dots[slideIndex - 1].className += " active";
 }
+const navitem = document.querySelectorAll(".list__nav-item");
+const listnav = document.querySelectorAll(".nav-header");
+const header = document.querySelector(".header");
+const arlistnav = [...listnav];
+const arraynav = [...navitem];
+
+for (let i = 0; i < arraynav.length; i++) {
+  arraynav[i].addEventListener("mouseover", onMouseover);
+  function onMouseover() {
+
+    header.style = "border-bottom: 1px solid #c4c4c4; box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; background-color:white";
+
+    const line = document.querySelector(".line");
+    line.style = "opacity: 1";
+    line.style.left = arraynav[i].offsetLeft + 20 + "px";
+    line.style.width = arraynav[i].offsetWidth - 45 + "px";
+
+    for (let j = 0; j < arlistnav.length; j++) {
+      if (arlistnav[j].classList.contains("nav-active")) {
+        arlistnav[j].classList.remove("nav-active");
+      }
+    }
+    arlistnav[i].classList.add("nav-active");
+  }
+  arraynav[i].addEventListener("mouseout", onBlurwindow);
+  function onBlurwindow() {
+    const line = document.querySelector(".line");
+    line.style = "opacity: 0";
+    header.style = "border: none";
+
+
+    for (let j = 0; j < arlistnav.length; j++) {
+      if (arlistnav[j].classList.contains("nav-active")) {
+        arlistnav[j].classList.remove("nav-active");
+      }
+    }
+  }
+}
+
+const overload = document.querySelector(".overload");
+const ctmb = document.querySelector(".ct-mb");
+function handleclickonMB() {
+  overload.style = "display: block";
+  ctmb.style = "transform: translateX(0);";
+}
+
+function handleclickoffMB() {
+  overload.style = "display: none";
+  ctmb.style = "transform: translateX(100%);";
+}
+
+const navmb = document.querySelectorAll(".list__nav-item-mb");
+const navmbitem = document.querySelectorAll(".list__item-mb");
+const arraynavmb = [...navmb];
+const arraynavmbitem = [...navmbitem];
+
+for (let i = 0; i < arraynavmb.length; i++) {
+  arraynavmb[i].addEventListener("click", handleclick);
+  function handleclick() {
+    if (arraynavmbitem[i].classList.contains("hidden")) {
+      arraynavmbitem[i].classList.remove("hidden");
+    } else arraynavmbitem[i].classList.add("hidden");
+  }
+}
 
 
