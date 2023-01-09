@@ -1461,6 +1461,26 @@ body {
 
 
 @media screen and (max-width:768px) and (min-width:0){
+  .intro-left{
+    width: 100%;
+  }
+  .email-input{
+    width: 90%;
+    padding: 20px;
+  }
+  .icon{
+    display: flex;
+    
+    justify-content: center;
+   
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 20px 25px rgb(189 206 212 / 20%);
+    border-radius: 25%;
+    min-width: 30px;
+    height: 30px;
+    margin-right: 30px;
+  }
   .header {
     padding: 12px;
   }
@@ -1518,6 +1538,44 @@ body {
   .pink.tabcontent,.intro-section,.platform.tabcontent,.department.tabcontent{
     flex-direction: column-reverse;
   }
+  .review-section{
+    flex-direction:column;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin: 80px auto;
+    margin-top: 150px;
+  }
+  .review-img{
+    
+    min-width: 100%;
+    
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    
+    
+  }
+  .review-img::after{
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    right:20%;
+  }
+  .review-img img{
+    margin: 0 auto;
+   position: relative;
+   width: 60%;
+  
+  
+  }
+  .review-logo{
+
+    flex-wrap: wrap;
+  }
+  .review-content{
+    width: 80%;
+  }
   .platform-section .icon{
     opacity: 0;
   }
@@ -1538,9 +1596,37 @@ body {
   .tab-section{
     padding: 30px 40px;
   }
+  .banner-btn {
+
+    width: 90%;
+    flex-direction: column;
+    padding: 35px 20px;
+
+    align-items: flex-start;
+    background-position: 107% 112%;
+    background-size: 147px;
+    margin-bottom: 20px;
+  }
+  .support-section{
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+  .support-text{
+    width:80%;
+  }
+  .offer-list{
+    flex-wrap: wrap;
+  }
+  .offer-item{
+    margin-bottom: 10px;
+  }
+  .support-img{
+    width: 100%;
+  }
 }
 
-@media screen and (max-width:1024px ) and (min-width:769px){
+
+@media screen and (max-width:1023px ) and (min-width:769px){
   .banner-btn {
 
     width: 90%;
@@ -1556,6 +1642,12 @@ body {
 }
 
 @media screen and (max-width:480px) {
+  .review-img::after{
+    
+    width: 20px;
+    height: 20px;
+    
+  }
   .banner-btn {
     background-position: 110% 110%;
   }
